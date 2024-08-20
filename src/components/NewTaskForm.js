@@ -13,14 +13,15 @@ function NewTaskForm({ categories, onTaskFormSubmit }) {
 
   return (
     <form className="new-task-form" onSubmit={handleSubmit}>
-      <label htmlFor="task-details">Details</label>
+      <label htmlFor="task-details">Details</label> 
+      <input
         type="text"
         id="task-details"
         placeholder="New task details"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <label htmlFor="task-category">Category</label> 
+      <label htmlFor="task-category">Category</label> {/* Added label for the select */}
       <select
         id="task-category"
         value={category}
