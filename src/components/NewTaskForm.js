@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function NewTaskForm({ categories, onTaskFormSubmit }) {
   const [text, setText] = useState("");
-  const [category, setCategory] = useState(categories[1]); // Default to first category (excluding "All")
+  const [category, setCategory] = useState(categories[1]); 
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -13,15 +13,14 @@ function NewTaskForm({ categories, onTaskFormSubmit }) {
 
   return (
     <form className="new-task-form" onSubmit={handleSubmit}>
-      <label htmlFor="task-details">Details</label> {/* Added label for the input */}
-      <input
+      <label htmlFor="task-details">Details</label>
         type="text"
         id="task-details"
         placeholder="New task details"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <label htmlFor="task-category">Category</label> {/* Added label for the select */}
+      <label htmlFor="task-category">Category</label> 
       <select
         id="task-category"
         value={category}
